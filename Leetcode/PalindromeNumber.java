@@ -1,6 +1,6 @@
 public class PalindromeNumber {
     public static void main(String[] args) {
-        int x = 10;
+        int x = 121;
     int reverse = 0;
     int buff = x;
     while(x > 0){
@@ -9,6 +9,7 @@ public class PalindromeNumber {
     }
     if(reverse == buff)
     System.out.println("is Palindrome");
-    System.out.println("isnot Palindrome");
+    else
+    System.out.println("is not Palindrome");
     }
 }
