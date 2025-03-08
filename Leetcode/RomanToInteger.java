@@ -1,4 +1,13 @@
 public class RomanToInteger {
+    public static int RomanToInt(String s){
+        int ans = 0;
+        for(int i = 0; i < s.length(); i++){
+            if(i + 1 < s.length() && getNumber(s.charAt(i)) < getNumber(s.charAt(i+1)))
+            ans -= getNumber(s.charAt(i));
+            else
+            ans += getNumber(s.charAt(i));
+        } return ans;
+    }
     public static boolean isValidNumber(String s){
         return s.contains("IIII") || s.contains("VV") || s.contains("XXXX") || s.contains("LL") || s.contains("CCCC") || s.contains("DD")|| s.contains("MMMM");
     }
@@ -19,14 +28,6 @@ public class RomanToInteger {
         if(isValidNumber(s)){
             System.out.println("Error invalid Roman number");
         return;}
-
-        int ans = 0;
-        for(int i = 0; i < s.length(); i++){
-            if(i + 1 < s.length() && getNumber(s.charAt(i)) < getNumber(s.charAt(i+1)))
-            ans -= getNumber(s.charAt(i));
-            else
-            ans += getNumber(s.charAt(i));
-        }
-        System.out.println(ans);
+        System.out.println(RomanToInt(s));
     }
 }

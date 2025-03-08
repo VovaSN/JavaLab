@@ -1,8 +1,7 @@
 import java.util.Stack;
 
 public class ValidParentheses {
-    private static boolean isPair(char curr, char last)
-    {
+    private static boolean isPair(char curr, char last){
         return (curr == '}' && last == '{') ||
                (curr == ']' && last == '[') ||
                (curr == ')' && last == '(');
@@ -11,8 +10,7 @@ public class ValidParentheses {
         Stack<Character> cs = new Stack<>();
     for(int i = 0; i < s.length();i++){
         char curr = s.charAt(i);
-        if(!cs.empty())
-        {
+        if(!cs.empty()) {
             char last = cs.peek();
             if(isPair(curr, last)){
                     cs.pop();
@@ -23,7 +21,6 @@ public class ValidParentheses {
         cs.push(curr);
     }
     return cs.isEmpty();
-
 }
     public static void main(String[] args) {
         String s = "[]";
