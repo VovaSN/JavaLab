@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Lab2_5 {
 
     public static int minSumNumber(int[] numbers){
-        int minSum = 99999999;
+        int minSum = Integer.MAX_VALUE;
         int minNumber = numbers[0];
         for(int i = 0; i < numbers.length; ++i){
             if(minSum >= NumberSum(numbers[i])){ 

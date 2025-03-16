@@ -13,7 +13,7 @@ public class Lab2_6 {
         int m = sc.nextInt();
         int n = sc.nextInt();
         sc.close();
-        int minSum = 99999, count = 0;
+        int minSum = Integer.MAX_VALUE, count = 0;
         for(int i = m; i <= n; ++i){
             if(minSum >= NumberSum(i)){
                 minSum = NumberSum(i);

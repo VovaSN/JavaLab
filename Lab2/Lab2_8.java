@@ -12,7 +12,7 @@ public class Lab2_8 {
         int n = sc.nextInt();
         sc.close();
         long result = 1;
-        for(int i = 2; i < n; ++i){
+        for(int i = 2; i <= n; ++i){
             result = nok(result,i);
         }
         System.out.println(result);
